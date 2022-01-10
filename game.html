@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <style>
+     @keyframes sliding {
+         0%{
+             background-color: mediumvioletred;
+             left: 0;
+             top: 0;
+         }
+         20%{
+             background-color: purple;
+             left: 1000px
+         }
+         40%{
+             background-color: purple;
+             top: 0px;
+             left: 1000px;
+         }
+         60%{
+             background-color: purple;
+             top: 1000px;
+         }
+         80%{
+             background-color: purple;
+             top: 0px;
+         }
+         100%{
+             background-color: yellow;
+             top: 1000px;
+         }
+         
+     }
+        .background{
+            width: 1200px;
+            height: 500px;
+            border: 6px solid red;
+            background-color: rgba(0, 128, 0, 0.814);
+            margin-left: 100px;
+            margin-top: 90px;
+            position: relative; 
+           
+        }
+        .background:hover{
+            transition: translate 0.2s ease-in 0.2s;
+        }
+        .box{
+            border: 2px black solid;
+            height: 30px;
+            width: 80px;
+            background-color:red ;
+            position: absolute;
+            bottom:0;
+           transform: translate(1000px);
+           
+           
+        }
+        .background:hover .box{
+            transition: transform 2s ease-in 0.3s;
+            position: relative;
+            top: 0;
+        }
+        .ball{
+            border: 1px black solid;
+            height: 40px;
+            width: 40px;
+            background-color:indigo ;
+            position: absolute;
+            bottom:33px;
+            border-radius:20px ;
+            animation: sliding 2s ease-in-out 0.3s infinite alternate ;
+            animation-play-state: running;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+<div class="box"></div>
+<div class="ball"></div>
+    </div>
+</body>
+</html>
